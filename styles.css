@@ -1,0 +1,236 @@
+/* Penjing & Pocketarium — rice-paper & ink static stylesheet */
+:root {
+  --paper: #f3eddf;
+  --sheet: #f8f3e8;
+  --ink: #211d18;
+  --ink-soft: #4e453b;
+  --ochre: #8a6a55;
+  --rule: rgba(138, 106, 85, 0.34);
+  --cinnabar: #a8412e;
+  --foliage: #33402f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Noto Serif", "Source Han Serif SC", Georgia, "Times New Roman", serif;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(138, 106, 85, 0.06), transparent 45%),
+    radial-gradient(circle at 82% 88%, rgba(51, 64, 47, 0.05), transparent 50%);
+  padding: 28px 18px 56px;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--sheet);
+  border: 2px solid var(--ochre);
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(33, 29, 24, 0.07);
+}
+
+.inner {
+  border: 1px solid rgba(138, 106, 85, 0.62);
+  padding: 36px 32px 32px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1.8px solid var(--cinnabar);
+  border-radius: 5px;
+  color: var(--cinnabar);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  user-select: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ochre);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 15px;
+}
+
+nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--cinnabar);
+  border-bottom-color: rgba(168, 65, 46, 0.5);
+}
+
+h2 {
+  margin: 28px 0 10px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+p,
+li {
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+
+ul {
+  padding-left: 20px;
+  margin: 10px 0 16px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+a {
+  color: var(--cinnabar);
+  text-underline-offset: 3px;
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--ink);
+  margin-top: 0;
+}
+
+.card {
+  border: 1px solid var(--rule);
+  background: rgba(243, 237, 223, 0.45);
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+
+.card-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1.5px solid var(--ochre);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+  background: var(--sheet);
+}
+
+.btn:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+
+.btn-primary {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+
+.kv {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+
+.kv th,
+.kv td {
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.kv th {
+  width: 34%;
+  font-weight: 600;
+  color: var(--ink);
+  padding-right: 16px;
+}
+
+.kv td {
+  color: var(--ink-soft);
+  word-break: break-word;
+}
+
+footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 18px;
+  font-size: 13px;
+  color: var(--ochre);
+}
+
+@media (max-width: 560px) {
+  .inner {
+    padding: 24px 18px 22px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,4 @@
+# app-ads.txt for Pocketarium (https://pocketarium.github.io/app-ads.txt)
+# Replace the placeholder below with the authorized seller line(s) provided by
+# your ad network (e.g., Google AdMob) before enabling rewarded ads in production.
+# Format: <domain>, <publisher_id>, DIRECT, <certification_authority_id>
